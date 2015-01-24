@@ -13,6 +13,25 @@
 
     {{ header_meta }}
 
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png">
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/assets/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="{{ assets('css/style.css') }}">
 
@@ -44,7 +63,6 @@
       <div class="spinner"></div>
       <div class="shadow top"></div>
       <div class="overlay"></div>
-      <img src="{{ assets('images/rainbow-bg.png') }}" class="rainbow" />
       <div class="container wide">
         <h1><a href="{{ site.base_url }}">{{ site.name }}</a></h1>
         {% if pages %}
@@ -247,9 +265,12 @@
     {{ footer_meta }}
 
     <!-- js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
     <script type="text/javascript">
       var cover = {% if site.cover_photo %}'{{ site.cover_photo }}'{% else %}"{{ assets('images/cover-photo-1.jpg') }}"{% endif %};
       (function(d, t) {
+        window.console.log(d);
+        window.console.log(t);
           var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
           g.src = "{{ assets('js/pepper.min.js') }}";
           s.parentNode.insertBefore(g, s);
