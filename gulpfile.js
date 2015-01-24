@@ -4,13 +4,13 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     less = require('gulp-less'),
     path = require('path');
-    
+
 // run
 gulp.task('default', function() {
-  
+
   // easier to read variable
-  var themeName = 'expanse';
-  
+  var themeName = 'pepper';
+
   // less
   gulp.src('./assets/less/' + themeName + '.less')
     .pipe(less({ paths: [path.join(__dirname, 'less', 'includes')]}))
@@ -20,7 +20,7 @@ gulp.task('default', function() {
   // uglify
   gulp.src('./assets/js/' + themeName + '.js')
     .pipe(uglify())
-    .pipe(rename(themeName + '.min.js'))          
+    .pipe(rename(themeName + '.min.js'))
     .pipe(gulp.dest('./assets/js/'));
-  
+
 });

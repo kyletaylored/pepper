@@ -1,7 +1,7 @@
-theme-expanse
+Pepper
 =============
 
-The official repository for our default theme, Expanse. Fork this to use it as a boilerplate.
+This is a fork of the original Postach.io theme, Expanse.
 
 ## Getting Started
 
@@ -23,7 +23,6 @@ Run gulp to make sure all CSS and JavaScript files are the latest versions.
 gulp
 ```
 
-## Need More Info? 
+## Need More Info?
 
-Check out our [help documentation](http://help.postach.io/tag/theme-code) for more information on theming Postach.io sites.
-
+Check out the [help documentation](http://help.postach.io/tag/theme-code) for more information on theming Postach.io sites.
